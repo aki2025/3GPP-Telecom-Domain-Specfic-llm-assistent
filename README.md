@@ -2,60 +2,47 @@
 A specialized assistant for handling 3GPP telecommunication standard queries using various LLM providers with intelligent query classification and cost-effective deployment strategies.
 
 🌟 Key Features
-1. Intelligent Query Classification
-15 specialized query types including:
-Procedures
-Architecture
-Protocols
-Interfaces
-Security
-Performance
-QoS
-Reliability
-Deployment
-Interworking
-Migration
-Troubleshooting
-Compliance
-Features
-General queries
+1. Intelligent Query Classification: specialized query types including:
+	Procedures
+	Architecture
+	Protocols
+	Interfaces
+	Security
+	Performance
+	QoS
+	Reliability
+	Deployment
+	Interworking
+	Migration
+	Troubleshooting
+	Compliance
+	Features
+	General queries
+	
 2. Advanced Prompt Engineering
-Domain-specific context injection
-Multi-level keyword matching
-Confidence scoring system
-Hybrid classification with primary and secondary types
-Specialized response guidelines per query type
+	Domain-specific context injection
+	Multi-level keyword matching
+	Confidence scoring system
+	Hybrid classification with primary and secondary types
+	Specialized response guidelines per query type
+	
 3. Multi-Provider Support
-OpenAI GPT-4/3.5
-Anthropic Claude
-Google Vertex AI
-Mistral AI
-Failover system with backup providers
+	OpenAI GPT-4/3.5
+	Anthropic Claude
+	Google Vertex AI
+	Mistral AI
+	Failover system with backup providers
+	
 4. Extensible Architecture
-Abstract base classes for easy provider addition
-Modular prompt generation system
-Flexible response handling
-Error management and recovery
+	Abstract base classes for easy provider addition
+	Modular prompt generation system
+	Flexible response handling
+	Error management and recovery
+
 💰 Cost-Effective Deployment Strategies
-1. Tiered Provider Usage
-def configure_tiered_providers():
-    return {
-        'tier1': {
-            'provider': 'Mistral',  # Lowest cost
-            'model': 'mistral-small',
-            'query_types': [QueryType.GENERAL, QueryType.FEATURE]
-        },
-        'tier2': {
-            'provider': 'OpenAI',
-            'model': 'gpt-3.5-turbo',
-            'query_types': [QueryType.PROCEDURE, QueryType.PROTOCOL]
-        },
-        'tier3': {
-            'provider': 'Anthropic',
-            'model': 'claude-3',
-            'query_types': [QueryType.SECURITY, QueryType.COMPLIANCE]
-        }
-    }
+
+<img width="494" alt="image" src="https://github.com/user-attachments/assets/4feb699a-c5c7-432a-826a-9b1fbe5650f6" />
+
 2. Caching Implementation
 from functools import lru_cache
 
