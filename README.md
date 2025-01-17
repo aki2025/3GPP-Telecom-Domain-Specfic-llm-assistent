@@ -45,77 +45,28 @@ A specialized assistant for handling 3GPP telecommunication standard queries usi
 
 2. Caching Implementation
 from functools import lru_cache
+<img width="337" alt="image" src="https://github.com/user-attachments/assets/e97132ef-4e2e-4792-96c8-4075c1f0a8d7" />
 
-class CachingTelecomAssistant:
-    @lru_cache(maxsize=1000)
-    def get_cached_response(self, query_hash: str):
-        return self.process_query(query_hash)
+
 3. Cost Optimization Techniques
 Response Length Control
-def optimize_response_length(query_type: QueryType) -> int:
-    length_map = {
-        QueryType.GENERAL: 300,
-        QueryType.PROCEDURE: 800,
-        QueryType.ARCHITECTURE: 600,
-        # Add other types as needed
-    }
-    return length_map.get(query_type, 500)
+<img width="354" alt="image" src="https://github.com/user-attachments/assets/fe341639-85d0-4bad-a8e7-af427338f764" />
+
+
 Batch Processing
-def batch_process_queries(queries: List[str], batch_size: int = 5):
-    for i in range(0, len(queries), batch_size):
-        batch = queries[i:i + batch_size]
-        # Process batch together
+<img width="431" alt="image" src="https://github.com/user-attachments/assets/90ad73e5-b411-42c3-a491-63fee08f28b3" />
+
 🚀 Deployment Options
 1. Serverless Deployment (AWS Lambda)
-service: telecom-assistant
+<img width="280" alt="image" src="https://github.com/user-attachments/assets/fe2ed282-7528-4f69-8d6a-42311fad8197" />
 
-provider:
-  name: aws
-  runtime: python3.9
-  memorySize: 256
-  timeout: 30
-
-functions:
-  query:
-    handler: handler.process_query
-    events:
-      - http:
-          path: /query
-          method: post
 2. Container Deployment (Docker)
-FROM python:3.9-slim
+<img width="423" alt="image" src="https://github.com/user-attachments/assets/e41127f0-9710-46e4-892a-eb78f5ece032" />
 
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 3. Kubernetes Deployment
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: telecom-assistant
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: telecom-assistant
-  template:
-    metadata:
-      labels:
-        app: telecom-assistant
-    spec:
-      containers:
-      - name: telecom-assistant
-        image: telecom-assistant:latest
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
+<img width="271" alt="image" src="https://github.com/user-attachments/assets/b4027cdf-32c5-4ad2-a958-864c981153aa" />
+
 📊 Cost Optimization Best Practices
 Implement Request Throttling
 
