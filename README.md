@@ -69,69 +69,17 @@ Batch Processing
 
 📊 Cost Optimization Best Practices
 Implement Request Throttling
+<img width="433" alt="image" src="https://github.com/user-attachments/assets/5806f749-adb0-4f4c-97cf-da924b8a2332" />
 
-from ratelimit import limits, sleep_and_retry
-
-@sleep_and_retry
-@limits(calls=50, period=60)
-def rate_limited_query(query: str):
-    return process_query(query)
-Use Token Budget Management
-
-def manage_token_budget(query: str, max_tokens: int = 1000):
-    estimated_tokens = len(query.split()) * 1.5
-    return min(max_tokens, int(estimated_tokens * 2))
-Cache Warm-up Strategy
-
-def warm_up_cache():
-    common_queries = load_common_queries()
-    for query in common_queries:
-        get_cached_response(query)
 📈 Monitoring and Optimization
-1. Cost Tracking
-def track_usage(query: str, response: str, provider: str):
-    tokens_used = count_tokens(query + response)
-    cost = calculate_cost(tokens_used, provider)
-    log_usage(tokens_used, cost, provider)
-2. Performance Metrics
-def log_performance_metrics(query_type: QueryType, 
-                          response_time: float,
-                          tokens_used: int):
-    metrics = {
-        'query_type': query_type,
-        'response_time': response_time,
-        'tokens_used': tokens_used,
-        'timestamp': datetime.now()
-    }
-    save_metrics(metrics)
+<img width="386" alt="image" src="https://github.com/user-attachments/assets/7f956850-34b5-4b6c-aeff-361db63f23f9" />
+
 🔧 Installation and Setup
-Clone the repository
-git clone https://github.com/yourusername/telecom-assistant.git
-cd telecom-assistant
-Install dependencies
-pip install -r requirements.txt
-Set up environment variables
-export OPENAI_API_KEY="your-key"
-export ANTHROPIC_API_KEY="your-key"
-export GOOGLE_API_KEY="your-key"
-export MISTRAL_API_KEY="your-key"
-Run the application
-python main.py
+<img width="499" alt="image" src="https://github.com/user-attachments/assets/a706d46b-7663-4436-bff8-216818225ee6" />
+
 📝 Configuration
-Create a config.yaml file:
+<img width="562" alt="image" src="https://github.com/user-attachments/assets/78c627eb-85cc-4c23-958c-cdb104e0e182" />
 
-providers:
-  primary: openai
-  backup: [anthropic, mistral]
-
-caching:
-  enabled: true
-  max_size: 1000
-  ttl: 3600
-
-rate_limiting:
-  requests_per_minute: 50
-  burst: 10
 🤝 Contributing
 Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
