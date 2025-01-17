@@ -58,29 +58,38 @@ Batch Processing
 
 🚀 Deployment Options
 1. Serverless Deployment (AWS Lambda)
+   
 <img width="280" alt="image" src="https://github.com/user-attachments/assets/fe2ed282-7528-4f69-8d6a-42311fad8197" />
 
-2. Container Deployment (Docker)
+3. Container Deployment (Docker)
+   
 <img width="423" alt="image" src="https://github.com/user-attachments/assets/e41127f0-9710-46e4-892a-eb78f5ece032" />
 
 
-3. Kubernetes Deployment
+5. Kubernetes Deployment
+   
 <img width="271" alt="image" src="https://github.com/user-attachments/assets/b4027cdf-32c5-4ad2-a958-864c981153aa" />
 
 📊 Cost Optimization Best Practices
 Implement Request Throttling
+
 <img width="433" alt="image" src="https://github.com/user-attachments/assets/5806f749-adb0-4f4c-97cf-da924b8a2332" />
 
 📈 Monitoring and Optimization
+
 <img width="386" alt="image" src="https://github.com/user-attachments/assets/7f956850-34b5-4b6c-aeff-361db63f23f9" />
 
 🔧 Installation and Setup
+
 <img width="499" alt="image" src="https://github.com/user-attachments/assets/a706d46b-7663-4436-bff8-216818225ee6" />
 
 📝 Configuration
+
 <img width="562" alt="image" src="https://github.com/user-attachments/assets/78c627eb-85cc-4c23-958c-cdb104e0e182" />
 
+
 🤝 Contributing
+
 Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
 
 📄 License
